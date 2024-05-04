@@ -36,7 +36,7 @@ else:
 first_quest = input("First real question for the story.\nYou are in the middle of a forest and in front of you there are two pubs, you have to enter one of them:\n\n1)Nice place, cool people and normal prices.\n2)One beer for 2 euros.\n3)Why the fuck there are two pubs in the middle of a forest.\n\n")
 tries = 0
 wasted = int(0)
-while tries in range(3):
+while tries < 3:
 	if p_type == "monkey" and first_quest != "3":
 		print("You were autistic in the first question so now you'll skip the pre-adventure drink.\n")
 		break
@@ -105,7 +105,7 @@ while tries in range(3):
 	if p_type == "monkey" and attack == "1":
 		print("\nYou climb and do an incredible attack using your head and you kill the wizards. But the glass of the helmet breaks and you die too.\n\n             STUPID MONKEY..")
 		break
-	elif p_type == "monkey":
+	elif p_type == "monkey" and attack == "2":
 		print("\nYou wait till the Wizard is near and you go crazy. You jump on his face and start ripping him apart till the point that there was nothing left....\n\n           MONKEY WIN!!!!\n")
 		break
 	elif attack == "1" and wasted >= 10:
